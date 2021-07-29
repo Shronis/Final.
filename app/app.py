@@ -1,6 +1,6 @@
 from typing import List, Dict
 import simplejson as json
-from flask import Flask, request, Response, redirect
+from flask import Flask, request, Response, redirect, make_response, request
 from flask import render_template
 from flaskext.mysql import MySQL
 from pymysql.cursors import DictCursor
@@ -15,8 +15,14 @@ app.config['MYSQL_DATABASE_PORT'] = 3306
 app.config['MYSQL_DATABASE_DB'] = 'fordData'
 mysql.init_app(app)
 
+@app.route("/", methods=['GET'])
+def hello():
+    if request.method != 'GET':
+        return make_response('Malformed request', 400)
+    headers = {"Content-Type": "application/json"}
+    return make_response('it worked!', 200, headers)
 
-@app.route('/', methods=['GET'])
+@app.route('/data', methods=['GET'])
 def index():
     user = {'username': 'Ford Escort'}
     cursor = mysql.get_db().cursor()
