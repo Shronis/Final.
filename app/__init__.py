@@ -1,25 +1,18 @@
-"""Initialize app."""
 from flask import Flask
-from flask_assets import Environment
-from .assets import compile_assets
+from flask_sqlalchemy import SQLAlchemy
 
-assets = Environment()
+db = SQLAlchemy()
 
 
-def create_app():
+def init_app():
     """Construct the core application."""
     app = Flask(__name__, instance_relative_config=False)
     app.config.from_object('config.Config')
 
-    # Initialize plugins
-    assets.init_app(app)
+    db.init_app(app)
 
     with app.app_context():
-        # Import parts of our application
-        from .admin import routes
-        from .main importn routes
-        app.register_blueprint(admin_routes.admin_bp)
-        app.register_blueprint(main_routes.main_bp)
-        compile_assets(assets)
+        from . import routes  # Import routes
+        db.create_all()  # Create sql tables for our data models
 
         return app
