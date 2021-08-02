@@ -1,14 +1,4 @@
 
-# YOUR project showing postman listing all records
-![Postman displaying all records](screenshots/display.PNG)
-# YOUR project showing postman showing one record with a get request
-![View of one record](screenshots/View1PNG.PNG)
-# YOUR project showing postman creating a record by showing the post request and the results in the record listing
-![New data to become a record](screenshots/tobeadded.PNG)
-![View of the new record after the post request](screenshots/add.PNG)
-# YOUR project showing postman edit a record by showing the put request and the results in the record listing
-![The new data to go in the record](screenshots/newinfo.PNG)
-![View of the record after being edited](screenshots/newedit.PNG)
-# YOUR project showing postman delete a record by showing the delete request and the results in the record listing
-![record to be deleted](screenshots/tobedeleted.PNG)
-![list of records after deletion of 23](screenshots/deletion.PNG)
+Hi professor or TA, whoever grades this. Before you go through grading this I want to let you know that I could not get anything to work. It wasn't out of laziness, disrespect or any malintent, I simply ran out of time between work, personal life and other classes. Sorry that I couldn't finish. I am just submitting this to get whatever points I can.
+A little info about the code I built off the project 3 file and around part 7 I think git wasn't letting me merge the branches to master and I did not have time to figure out why 
+so that is why the merges stop and the master is simply a version of part 11 that I uploaded. I simply just took the code from the tutorial for each part to try and get any points I could. Sorry it ended it like this but enjoy the rest of your summer.
