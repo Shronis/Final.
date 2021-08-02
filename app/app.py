@@ -15,7 +15,7 @@ app.config['MYSQL_DATABASE_PORT'] = 3306
 app.config['MYSQL_DATABASE_DB'] = 'fordData'
 mysql.init_app(app)
 
-@app.route("/", methods=['GET'])
+@app.route("/test", methods=['GET'])
 def hello():
     if request.method != 'GET':
         return make_response('Malformed request', 400)
